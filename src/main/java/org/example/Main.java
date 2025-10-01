@@ -3,7 +3,7 @@ package org.example;
 import java.util.Scanner;
 
 public class Main {
-    static void main(String[] args) {
+    static void main() {
         // Create an instance of the Prime class (object)
         Prime prime = new Prime();
 
