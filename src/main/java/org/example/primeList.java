@@ -3,32 +3,38 @@ package org.example;
 import java.util.ArrayList;
 
 public class primeList {
+    // Instance variable to store the user's number
     int num;
 
-//    Constructor
+    // Constructor initializes the number for comparison
     public primeList(int n) {
         this.num = n;
     }
-    public void less_prime_list(){
-        Prime prime = new Prime();
-        ArrayList<Integer> nList = new ArrayList<Integer>();
 
-/* Since 2 is already a prime number and already accounted for in
- * the main class, we can use it to initialize the array
- */
+    // Method to find and print all prime numbers less than 'num'
+    public void less_prime_list(){
+        Prime prime = new Prime(); // Create an instance of the Prime class
+        ArrayList<Integer> nList = new ArrayList<Integer>(); // Dynamic list to store prime numbers
+
+        /* Since 2 is already known as a prime number (and even),
+         * we can add it manually to start the list.
+         */
         nList.add(2);
 
-//        Loop through all odd numbers and check which are prime, storing them in nlist.
-        for (int i = 3; i < num; i +=2) {
-            prime.setNumber(i);
+        /* Loop through all odd numbers from 3 up to (but not including) 'num'
+         * because even numbers (besides 2) can't be prime.
+         */
+        for (int i = 3; i < num; i += 2) {
+            prime.setNumber(i); // Set the current number in the Prime object
 
+            // Check if it's prime using the isPrime() method
             if (prime.isPrime()) {
-                nList.add(i);
+                nList.add(i); // Add to the list if it's a prime number
             }
         }
 
+        // Display the list of primes found below the given number
         System.out.print("Prime numbers less than " + num + " are:\n");
-//        Print out the list
         for (int i : nList) {
             System.out.print(i + ", ");
         }
