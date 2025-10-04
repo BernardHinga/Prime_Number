@@ -9,8 +9,7 @@ public class upperPrime {
         this.num = n;
     }
 
-    public void greaterPrime(){
-        int c = num;
+    public void greaterPrime(){=
         for (int i = num+1; i <= num+50; i++) {
             prime.setNumber(i);
 
