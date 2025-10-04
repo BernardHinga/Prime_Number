@@ -22,5 +22,10 @@ public class Main {
         } else {
             System.out.println(prime.getNumber() + " is not a prime number");
         }
+
+        primeList list = new primeList(prime.getNumber());
+
+        list.less_prime_list();
+
     }
 }
