@@ -27,5 +27,9 @@ public class Main {
 
         list.less_prime_list();
 
+        upperPrime up_num = new upperPrime(prime.getNumber());
+
+        up_num.greaterPrime();
+
     }
 }
